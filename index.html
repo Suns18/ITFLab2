@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITF2 - 66070185</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function setName() {
+            const nameField = document.getElementById("username")
+            const name = nameField.value
+            const title = document.getElementById("profile-link")
+            title.innerText = name + " Gallery"
+        }
+
+        function setImage() {
+            const profileImage = document.getElementById("profile-image")
+            const newImage = document.getElementById("user-picture")
+            const newImageLink = newImage.value
+            profileImage.style.backgroundImage = "url('" + newImageLink + "')"
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <div id='profile-image' class="parent">
+            <div class="child">
+                <h1>1</h1>
+            </div>
+        </div>
+        <a id='profile-link' href="https://www.instagram.com/suns_sn18/" target="_blank">Suns' Gallery</a>
+        <div class="flex">
+            <p>Set Profile Name</p>
+            <input id="username" type="text">
+            <button onclick="setName()">Click Me</button>
+        </div>
+        <div class="flex">
+            <p>Set Profile Picture</p>
+            <input id="user-picture" type="text"">
+            <button onclick="setImage()">Click Me</button>
+        </div>
+        <div class="gallery">
+            <div id="extend-col" class="image"></div>
+            <div class="image"></div>
+            <div id="extend-row" class="image"></div>
+            <div id="extend-col" class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+            <div class="image"></div>
+        </div>
+    </main>
+</body>
+</html>
